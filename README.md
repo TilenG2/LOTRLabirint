@@ -1,3 +1,3 @@
 # Maze
  
-https://github.com/TilenG2/LOTRLabirint
+https://tileng2.github.io/LOTRLabirint/
