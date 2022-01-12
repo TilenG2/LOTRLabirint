@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='ICON' href="img/icon.ico" />
+    <title>Labirint</title>
+</head>
+
+<body>
+    <div class="blur">
+        <div id="timer">
+        </div>
+        <div id="gamecontainer">
+            <div id="start">
+                <span>Rules</span>
+                <p>You are supposed to guide Frodo through the maze using the arrow keys or wasd. First, you must obtain the ring in the bottom left corner and throw it into the fire of mount doom in the bottom right corner.
+                </p>
+                <input type="button" onclick="generate()" value="Start">
+                <p id="drugi">This was only used for a school project.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/maze.js"></script>
+<script src="js/sweetalert2.js"></script>
+
+</html>

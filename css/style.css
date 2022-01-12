@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Ringbearer;
+    src: url(../fonts/RingbearerMedium.ttf);
+}
+
+* {
+    font-family: Ringbearer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/Mount_Doom.jpg) no-repeat;
+    background-size: 200vh;
+    background-color: #000;
+    background-position: center;
+}
+
+.blur {
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100vh;
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+b {
+    font-size: 10px;
+    font-weight: normal;
+    position: absolute;
+    display: block;
+    color: #000;
+    text-align: center;
+    margin: 10px;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+#timer {
+    padding-top: 1vh;
+    height: 2%;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#gamecontainer {
+    margin: 0 auto;
+    margin-top: 10vh;
+    height: 85vh;
+    position: relative;
+}
+
+#start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+    font-size: 2vh;
+}
+
+p {
+    width: 25vw;
+    margin-bottom: 5vh;
+}
+
+.ground {
+    background: url(../img/path.png) no-repeat;
+    background-size: 2.4vh 2.4vh;
+}
+
+.wall {
+    background: url(../img/wall.png) no-repeat;
+    background-size: 2.4vh 2.4vh;
+}
+
+.ring {
+    background: url(../img/ringpath.png) no-repeat;
+    background-size: 2.4vh 2.4vh;
+}
+
+.frodo {
+    background: url(../img/frodo.png) no-repeat;
+    background-size: 2.4vh 2.4vh;
+}
+
+.frodoring {
+    background: url(../img/frodoring.png) no-repeat;
+    background-size: 2.3vh 2.3vh;
+}
+
+
+/* .enemy {
+    background: url(../img/ring.png) no-repeat;
+    background-size: 2.3vh 2.3vh;
+} */
+
+.swal2-text {
+    color: #000;
+}
+
+#drugi {
+    position: absolute;
+    bottom: 1vh;
+}
+
+input {
+    margin: 20vh auto 0 auto;
+    width: 15vh;
+    height: 7vh;
+    font-size: 2.5vh;
+    border-radius: 1vh;
+    border-width: 0.25vh;
+    border: rgb(100, 100, 100);
+    background-color: gray;
+}
