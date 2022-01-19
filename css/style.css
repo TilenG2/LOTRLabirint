@@ -110,7 +110,24 @@ p {
     bottom: 1vh;
 }
 
+#replay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50vw;
+    height: 85vh;
+    color: whitesmoke;
+    font-size: 2vh;
+}
+
+#replayButton {
+    margin: 10vh auto 0 auto;
+}
+
 input {
+    cursor: pointer;
     margin: 20vh auto 0 auto;
     width: 15vh;
     height: 7vh;

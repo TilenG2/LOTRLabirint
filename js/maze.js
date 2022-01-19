@@ -3,6 +3,8 @@ canv.id = 'fireAnim';
 canv.style.width = '2.4vh';
 canv.style.height = '2.4vh';
 
+var div = document.createElement('div');
+
 var time = document.getElementById('timer');
 
 var local;
@@ -25,18 +27,18 @@ function myTimer() {
 
 
 var myMusic = new Audio('sound/bacground.mp3');
-var myVideo = new Audio('sound/video.mp4');
+// var myVideo = new Audio('sound/video.mp4');
 var ringPicup = new Audio('sound/ringPickup.mp3');
 
-var video
+// var video
 
 function startSound() {
     myMusic.play();
 }
 
-function startVideo() {
+// function startVideo() {
 
-}
+// }
 // window.onload =
 function generate() {
     startSound();
@@ -219,7 +221,12 @@ function generate() {
                     endTime = min + ':0' + s;
                 else
                     endTime = min + ':' + s;
-                //document.getElementById('gamecontainer').innerHTML = '<input type="button" onclick="replay()" value="Replay">';
+                document.getElementById('gamecontainer').innerHTML = "";
+                time.innerHTML = '';
+                document.getElementById('gamecontainer').appendChild(div);
+                div.id = 'replay';
+                div.innerHTML = '<p>If you wish you can try to beat your previus time by pressing the replay button</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
+                min = 0;
                 Swal.fire({
                     title: 'Great job!',
                     text: 'Your time was ' + endTime,
