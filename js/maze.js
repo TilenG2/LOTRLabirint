@@ -40,6 +40,20 @@ function startSound() {
 
 // }
 // window.onload =
+function start() {
+    Swal.fire({
+        title: "BACKSTORY",
+        html: '<iframe width="450" height="260" src="./vid/video.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        confirmButtonColor: "#707070",
+        confirmButtonText: "Start",
+        confirmButtonTextColor: "Black",
+        background: 'grey',
+        focusConfirm: false
+    }).then(function() {
+        generate();
+    });
+}
+
 function generate() {
     startSound();
     local = Date.now();
