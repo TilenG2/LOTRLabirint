@@ -231,7 +231,6 @@ function generate() {
                     }
                 };
                 if ((playerPos[0].x == enemyPos[0].x && playerPos[0].y == enemyPos[0].y) || (playerPos[0].x == enemyPos[1].x && playerPos[0].y == enemyPos[1].y)) {
-                    enemyDeath = true;
                     clearInterval(timer);
                     myMusic.pause();
                     myMusic = new Audio('sound/bacground.mp3');
