@@ -27,10 +27,19 @@ function myTimer() {
 
 var myMusic = new Audio('sound/bacground.mp3');
 var ringPicup = new Audio('sound/ringPickup.mp3');
-myMusic.loop = true;
+var nom = new Audio('sound/nom.mp3');
 
 function startSound() {
+    if (typeof myMusic.loop == 'boolean') {
+        myMusic.loop = true;
+    } else {
+        myAudio.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+    }
     myMusic.play();
+
 }
 
 function start() {
@@ -231,6 +240,8 @@ function generate() {
                     }
                 };
                 if ((playerPos[0].x == enemyPos[0].x && playerPos[0].y == enemyPos[0].y) || (playerPos[0].x == enemyPos[1].x && playerPos[0].y == enemyPos[1].y)) {
+                    playable = false;
+                    nom.play();
                     clearInterval(timer);
                     myMusic.pause();
                     myMusic = new Audio('sound/bacground.mp3');
