@@ -6,7 +6,6 @@ canv.style.height = '2.4vh';
 var div = document.createElement('div');
 
 var time = document.getElementById('timer');
-
 var local;
 var min = 0;
 var s = 0;
@@ -27,26 +26,19 @@ function myTimer() {
 
 
 var myMusic = new Audio('sound/bacground.mp3');
-// var myVideo = new Audio('sound/video.mp4');
 var ringPicup = new Audio('sound/ringPickup.mp3');
-
-// var video
+myMusic.loop = true;
 
 function startSound() {
     myMusic.play();
 }
 
-// function startVideo() {
-
-// }
-// window.onload =
 function start() {
     Swal.fire({
         title: "BACKSTORY",
         html: '<iframe width="450" height="260" src="./vid/video.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         confirmButtonColor: "#707070",
         confirmButtonText: "Start",
-        confirmButtonTextColor: "Black",
         background: 'grey',
         focusConfirm: false
     }).then(function() {
@@ -73,7 +65,7 @@ function generate() {
             [0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0],
             [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0],
             [0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0],
-            [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0],
+            [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0],
             [0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0],
             [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0],
             [0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0],
@@ -82,7 +74,7 @@ function generate() {
             [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0],
             [0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0],
             [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0],
-            [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0],
+            [0, 1, 1, 1, 0, 6, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0],
             [0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0],
             [0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0],
             [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0],
@@ -150,13 +142,17 @@ function generate() {
         moveable = 1,
         player = 2,
         goal = 3,
-        playerOnGoal = 4,
+        // playerOnGoal = 4,
         ring = 5,
         // solvePath = 6,
         // solvePathRing = 7,
         // solvePathGoal = 8,
         enemyLR = 6,
+        enemyLRCounter = 0,
+        enemyLRToggle = true,
         enemyUD = 7,
+        enemyUDCounter = 9,
+        enemyUDToggle = true,
         winnable = false,
         playable = true,
         x, y, i = 0,
@@ -168,7 +164,10 @@ function generate() {
     playarea.style.margin = '0 auto';
     var temp,
         playerPos = [],
-        renderTile = function(cX, cY) {
+        enemyPos = [];
+    enemyPos[0] = { y: 21, x: 5 };
+    enemyPos[1] = { y: 12, x: 15 };
+    var renderTile = function(cX, cY) {
             temp = document.createElement('b');
             temp.style.width = tileWidth + 'vh';
             temp.style.height = tileHeight + 'vh';
@@ -194,20 +193,22 @@ function generate() {
                     temp.classList.add('end');
                     temp.appendChild(canv);
                     break;
-                case playerOnGoal:
-                    temp.style.background = '#ff0';
-                    temp.style.border = '1px solid #000';
-                    playerPos[i] = { x: cX, y: cY };
-                    i++
-                    break;
+                    // case playerOnGoal:
+                    //     temp.style.background = '#ff0';
+                    //     temp.style.border = '1px solid #000';
+                    //     playerPos[i] = { x: cX, y: cY };
+                    //     i++
+                    //     break;
                 case ring:
                     temp.classList.add('ring');
                     break;
                 case enemyLR:
+                    enemyPos[0] = { y: cY, x: cX };
                     temp.classList.add('enemy');
                     break;
                 case enemyUD:
                     temp.classList.add('enemy');
+                    enemyPos[1] = { y: cY, x: cX };
                     break;
                 default:
                     break;
@@ -220,6 +221,8 @@ function generate() {
                 i = 0;
                 document.getElementById('gamecontainer').innerHTML = "";
                 //Draw World
+                moveEnemyLR();
+                moveEnemyUD();
                 for (y = 0; y < gameArray.length; y++) {
                     // console.log("myY:" + y);
                     for (x = 0; x < gameArray[y].length; x++) {
@@ -227,9 +230,29 @@ function generate() {
                         renderTile(x, y);
                     }
                 };
+                if ((playerPos[0].x == enemyPos[0].x && playerPos[0].y == enemyPos[0].y) || (playerPos[0].x == enemyPos[1].x && playerPos[0].y == enemyPos[1].y)) {
+                    enemyDeath = true;
+                    clearInterval(timer);
+                    myMusic.pause();
+                    myMusic = new Audio('sound/bacground.mp3');
+                    document.getElementById('gamecontainer').innerHTML = "";
+                    time.innerHTML = '';
+                    document.getElementById('gamecontainer').appendChild(div);
+                    div.id = 'replay';
+                    min = 0;
+                    div.innerHTML = '<p>It seem you got hit by an enemy want to try again?</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
+                    Swal.fire({
+                        title: 'Oh no!',
+                        text: 'You lost',
+                        background: 'grey',
+                        confirmButtonColor: '#b59e7b',
+                        focusConfirm: false
+                    });
+                }
             } else {
                 clearInterval(timer);
                 myMusic.pause();
+                myMusic = new Audio('sound/bacground.mp3');
                 var endTime;
                 if (s < 10)
                     endTime = min + ':0' + s;
@@ -239,8 +262,8 @@ function generate() {
                 time.innerHTML = '';
                 document.getElementById('gamecontainer').appendChild(div);
                 div.id = 'replay';
-                div.innerHTML = '<p>If you wish you can try to beat your previus time by pressing the replay button</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
                 min = 0;
+                div.innerHTML = '<p>If you wish you can try to beat your previus time by pressing the replay button</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
                 Swal.fire({
                     title: 'Great job!',
                     text: 'Your time was ' + endTime,
@@ -248,6 +271,7 @@ function generate() {
                     confirmButtonColor: '#b59e7b',
                     focusConfirm: false
                 });
+
             }
         },
         move = function(direction) {
@@ -268,6 +292,10 @@ function generate() {
                             break;
                         case 3: // LEFT
                             newX = playerPos[i].x - 1;
+                            newY = playerPos[i].y;
+                            break;
+                        case 4:
+                            newX = playerPos[i].x;
                             newY = playerPos[i].y;
                             break;
                         default:
@@ -303,6 +331,36 @@ function generate() {
             renderWorld();
             window.focus();
         },
+        moveEnemyLR = function() {
+            if (enemyLRCounter < 6 && enemyLRToggle) {
+                gameArray[enemyPos[0].y][enemyPos[0].x + 1] = 6;
+                gameArray[enemyPos[0].y][enemyPos[0].x] = moveable;
+                enemyLRCounter++;
+                if (enemyLRCounter == 6)
+                    enemyLRToggle = false;
+            } else {
+                gameArray[enemyPos[0].y][enemyPos[0].x - 1] = 6;
+                gameArray[enemyPos[0].y][enemyPos[0].x] = moveable;
+                enemyLRCounter--;
+                if (enemyLRCounter == 0)
+                    enemyLRToggle = true;
+            }
+        },
+        moveEnemyUD = function() {
+            if (enemyUDCounter < 20 && enemyUDToggle) {
+                gameArray[enemyPos[1].y - 1][enemyPos[1].x] = 7;
+                gameArray[enemyPos[1].y][enemyPos[1].x] = moveable;
+                enemyUDCounter++;
+                if (enemyUDCounter == 20)
+                    enemyUDToggle = false;
+            } else {
+                gameArray[enemyPos[1].y + 1][enemyPos[1].x] = 7;
+                gameArray[enemyPos[1].y][enemyPos[1].x] = moveable;
+                enemyUDCounter--;
+                if (enemyUDCounter == 0)
+                    enemyUDToggle = true;
+            }
+        },
         map = {
             38: 0, // Up
             39: 1, // Right
@@ -311,7 +369,8 @@ function generate() {
             87: 0, // W
             68: 1, // D
             83: 2, // S
-            65: 3 // A
+            65: 3, // A
+            32: 4 //Space
         }, //inputmanager
         input = function(event) {
 

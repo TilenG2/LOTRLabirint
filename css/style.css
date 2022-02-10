@@ -93,14 +93,13 @@ p {
 
 .frodoring {
     background: url(../img/frodoring.png) no-repeat;
-    background-size: 2.3vh 2.3vh;
+    background-size: 2.4vh 2.4vh;
 }
 
-
-/* .enemy {
-    background: url(../img/ring.png) no-repeat;
-    background-size: 2.3vh 2.3vh;
-} */
+.enemy {
+    background: url(../img/orc.png) no-repeat;
+    background-size: 2.4vh 2.4vh;
+}
 
 .swal2-text {
     color: #000;
