@@ -1,7 +1,7 @@
 var canv = document.createElement('canvas');
 canv.id = 'fireAnim';
-canv.style.width = '2.3vh';
-canv.style.height = '2.3vh';
+canv.style.width = '2.2vh';
+canv.style.height = '2.2vh';
 
 var div = document.createElement('div');
 
