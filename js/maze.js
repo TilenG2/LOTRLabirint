@@ -42,6 +42,16 @@ function startSound() {
 
 }
 
+function info() {
+    Swal.fire({
+        title: 'Controls',
+        html: ' <p class="sweetalert">wasd or arrow keys ---> to move</p> <p class="sweetalert">space ---> wait only the enemys move </p>',
+        background: 'grey',
+        confirmButtonColor: '#b59e7b',
+        focusConfirm: false
+    });
+}
+
 
 function generate() {
     startSound();
@@ -239,7 +249,7 @@ function generate() {
                     div.innerHTML = '<p>It seems you got hit by an enemy, want to try again?</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
                     Swal.fire({
                         title: 'Oh no!',
-                        text: 'You lost',
+                        html: '<p class="sweetalert">You lost<p>',
                         background: 'grey',
                         confirmButtonColor: '#b59e7b',
                         focusConfirm: false
@@ -262,7 +272,7 @@ function generate() {
                 div.innerHTML = '<p>If you wish you can try to beat your previous time by pressing the replay button.</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
                 Swal.fire({
                     title: 'Great job!',
-                    text: 'Your time was ' + endTime,
+                    html: '<p class="sweetalert">Your time was ' + endTime + ' <p>',
                     background: 'grey',
                     confirmButtonColor: '#b59e7b',
                     focusConfirm: false
@@ -333,7 +343,7 @@ function generate() {
                             div.innerHTML = '<p>It seems you got hit by an enemy, want to try again?</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
                             Swal.fire({
                                 title: 'Oh no!',
-                                text: 'You lost',
+                                html: '<p class="sweetalert">You lost<p>',
                                 background: 'grey',
                                 confirmButtonColor: '#b59e7b',
                                 focusConfirm: false

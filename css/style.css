@@ -127,9 +127,24 @@ p {
     color: #000;
 }
 
+.sweetalert {
+    width: 100% !important;
+    color: #000;
+}
+
 #drugi {
     position: absolute;
     bottom: 1vh;
+}
+
+#information {
+    display: flex;
+    position: absolute;
+    width: 6vh;
+    height: 6vh;
+    top: 47vh;
+    left: 1vh;
+    cursor: pointer;
 }
 
 #replay {
