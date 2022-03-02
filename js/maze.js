@@ -45,7 +45,7 @@ function startSound() {
 function info() {
     Swal.fire({
         title: 'Controls',
-        html: ' <p class="sweetalert">wasd or arrow keys ---> to move</p> <p class="sweetalert">space ---> wait only the enemys move </p>',
+        html: ' <p class="sweetalert">wasd or arrow keys ---> to move</p> <p class="sweetalert">space ---> wait, only the enemies move </p>',
         background: 'grey',
         confirmButtonColor: '#b59e7b',
         focusConfirm: false
