@@ -1,7 +1,7 @@
 var canv = document.createElement('canvas');
 canv.id = 'fireAnim';
-canv.style.width = '2.4vh';
-canv.style.height = '2.4vh';
+canv.style.width = '2.3vh';
+canv.style.height = '2.3vh';
 
 var div = document.createElement('div');
 
@@ -154,8 +154,8 @@ function generate() {
         playable = true,
         x, y, i = 0,
         newX, newY,
-        tileWidth = 2.3,
-        tileHeight = 2.3;
+        tileWidth = 2.2,
+        tileHeight = 2.2;
     playarea.style.width = (gameArray[0].length) * tileWidth + 'vh';
     playarea.style.height = (gameArray.length) * tileHeight + 'vh';
     playarea.style.margin = '0 auto';
@@ -218,8 +218,6 @@ function generate() {
                 i = 0;
                 document.getElementById('gamecontainer').innerHTML = "";
                 //Draw World
-                moveEnemyLR();
-                moveEnemyUD();
                 for (y = 0; y < gameArray.length; y++) {
                     // console.log("myY:" + y);
                     for (x = 0; x < gameArray[y].length; x++) {
@@ -238,7 +236,7 @@ function generate() {
                     document.getElementById('gamecontainer').appendChild(div);
                     div.id = 'replay';
                     min = 0;
-                    div.innerHTML = '<p>It seem you got hit by an enemy want to try again?</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
+                    div.innerHTML = '<p>It seems you got hit by an enemy, want to try again?</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
                     Swal.fire({
                         title: 'Oh no!',
                         text: 'You lost',
@@ -261,7 +259,7 @@ function generate() {
                 document.getElementById('gamecontainer').appendChild(div);
                 div.id = 'replay';
                 min = 0;
-                div.innerHTML = '<p>If you wish you can try to beat your previus time by pressing the replay button</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
+                div.innerHTML = '<p>If you wish you can try to beat your previous time by pressing the replay button.</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
                 Swal.fire({
                     title: 'Great job!',
                     text: 'Your time was ' + endTime,
@@ -274,6 +272,9 @@ function generate() {
         },
         move = function(direction) {
             if (playable) {
+
+                moveEnemyLR();
+                moveEnemyUD();
                 for (i = 0; i < playerPos.length; i++) {
                     switch (direction) {
                         case 0: // UP
@@ -316,6 +317,27 @@ function generate() {
                             gameArray[playerPos[i].y][playerPos[i].x] = moveable;
                             gameArray[newY][newX] = player;
                             winnable = true;
+                            break;
+                        case enemyUD:
+                        case enemyLR:
+                            playable = false;
+                            nom.play();
+                            clearInterval(timer);
+                            myMusic.pause();
+                            myMusic = new Audio('sound/bacground.mp3');
+                            document.getElementById('gamecontainer').innerHTML = "";
+                            time.innerHTML = '';
+                            document.getElementById('gamecontainer').appendChild(div);
+                            div.id = 'replay';
+                            min = 0;
+                            div.innerHTML = '<p>It seems you got hit by an enemy, want to try again?</p><input id="replayButton" type="button" onclick="replay()" value="Replay">';
+                            Swal.fire({
+                                title: 'Oh no!',
+                                text: 'You lost',
+                                background: 'grey',
+                                confirmButtonColor: '#b59e7b',
+                                focusConfirm: false
+                            });
                             break;
                         default:
                             break;

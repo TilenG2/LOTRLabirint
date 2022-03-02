@@ -13,16 +13,23 @@
     <div class="blur">
 
     </div>
-    <div id="gamecontainer">
-        <div id="start">
-            <span>Rules</span>
-            <p>You are supposed to guide Frodo through the maze using the arrow keys or wasd and space to wait. Waiting alows you to stay in place and letting the enemyes move around. First, you must obtain the ring in the bottom left corner and throw it
-                into the fire of mount doom in the bottom right corner.
-            </p>
-            <input type="button" onclick="generate()" value="Start">
+    <div class="main">
+        <div class="title">
+            <p>Lord of the Rings Labirint</p>
         </div>
-    </div>
-    <div id="timer">
+        <div id="gamecontainer">
+            <div id="start">
+                <span>Backstory</span>
+                <p>Frodo lost the ring on the way to Mount Doom, guide Frodo through the maze to the ring and then throw the ring into the fire while avoiding the orcs in the maze. You are in the top left corner of the play area, the ring is in the bottom
+                    left and the fire is in the bottom right corner.
+                </p>
+                <input type="button" onclick="generate()" value="Start">
+            </div>
+
+        </div>
+        <div id="timer">
+        </div>
+        <div id="information"></div>
     </div>
 </body>
 <script src="js/maze.js"></script>
