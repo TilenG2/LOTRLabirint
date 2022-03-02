@@ -12,34 +12,27 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.blur {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: url(../img/Mount_Doom.jpg) no-repeat;
     background-size: 200vh;
     background-color: #000;
     background-position: center;
-}
-
-.blur {
-    backdrop-filter: blur(5px);
-    width: 100%;
-    height: 100vh;
-    position: static;
-    margin: 0;
-    padding: 0;
+    filter: blur(4px);
+    transform: scale(1.1);
 }
 
 b {
     font-size: 10px;
-    font-weight: normal;
     position: absolute;
     display: block;
-    color: #000;
-    text-align: center;
-    margin: 10px;
-    -webkit-transition: all .25s linear;
-    -moz-transition: all .25s linear;
-    -ms-transition: all .25s linear;
-    -o-transition: all .25s linear;
-    transition: all .25s linear;
 }
 
 #timer {
@@ -72,32 +65,35 @@ p {
 }
 
 .ground {
-    background: url(../img/path.png) no-repeat;
-    background-size: 2.4vh 2.4vh;
+    background: url(../img/path.png);
 }
 
 .wall {
-    background: url(../img/wall.png) no-repeat;
-    background-size: 2.4vh 2.4vh;
+    background: url(../img/wall.png);
 }
 
 .ring {
-    background: url(../img/ringpath.png) no-repeat;
-    background-size: 2.4vh 2.4vh;
+    background: url(../img/ringpath.png);
 }
 
 .frodo {
-    background: url(../img/frodo.png) no-repeat;
-    background-size: 2.4vh 2.4vh;
+    background: url(../img/frodo.png);
 }
 
 .frodoring {
-    background: url(../img/frodoring.png) no-repeat;
-    background-size: 2.4vh 2.4vh;
+    background: url(../img/frodoring.png);
 }
 
 .enemy {
-    background: url(../img/orc.png) no-repeat;
+    background: url(../img/orc.png);
+}
+
+.ground,
+.wall,
+.ring,
+.frodo,
+.frodoring,
+.enemy {
     background-size: 2.4vh 2.4vh;
 }
 

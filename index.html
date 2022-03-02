@@ -11,19 +11,18 @@
 
 <body>
     <div class="blur">
-        <div id="timer">
+
+    </div>
+    <div id="gamecontainer">
+        <div id="start">
+            <span>Rules</span>
+            <p>You are supposed to guide Frodo through the maze using the arrow keys or wasd and space to wait. Waiting alows you to stay in place and letting the enemyes move around. First, you must obtain the ring in the bottom left corner and throw it
+                into the fire of mount doom in the bottom right corner.
+            </p>
+            <input type="button" onclick="generate()" value="Start">
         </div>
-        <div id="gamecontainer">
-            <div id="start">
-                <span>Rules</span>
-                <p>You are supposed to guide Frodo through the maze using the arrow keys or wasd and space to wait. Waiting alows you to stay in place and letting the enemyes move around. First, you must obtain the ring in the bottom left corner and throw
-                    it into the fire of mount doom in the bottom right corner.
-                </p>
-                <input type="button" onclick="start()" value="Start">
-                <p id="drugi">This was only used for a school project.
-                </p>
-            </div>
-        </div>
+    </div>
+    <div id="timer">
     </div>
 </body>
 <script src="js/maze.js"></script>

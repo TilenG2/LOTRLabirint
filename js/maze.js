@@ -42,18 +42,6 @@ function startSound() {
 
 }
 
-function start() {
-    Swal.fire({
-        title: "BACKSTORY",
-        html: '<iframe width="450" height="260" src="./vid/video.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-        confirmButtonColor: "#707070",
-        confirmButtonText: "Start",
-        background: 'grey',
-        focusConfirm: false
-    }).then(function() {
-        generate();
-    });
-}
 
 function generate() {
     startSound();
@@ -180,8 +168,8 @@ function generate() {
             temp = document.createElement('b');
             temp.style.width = tileWidth + 'vh';
             temp.style.height = tileHeight + 'vh';
-            temp.style.top = cY * tileWidth + 'vh';
-            temp.style.left = cX * tileHeight + 'vh';
+            temp.style.top = cY * (tileWidth - 0.01) + 'vh';
+            temp.style.left = cX * (tileHeight - 0.01) + 'vh';
 
             switch (gameArray[cY][cX]) {
                 case wall:
